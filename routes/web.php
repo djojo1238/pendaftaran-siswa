@@ -51,6 +51,7 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/eskul/{id}', [EskulController::class, 'delete'])->name('deleteeskul');
 
     Route::get('/data-daftar',[DaftarController::class, 'siswa'])->name('datadaftar');
+    Route::get('/datasiswa/{id}', [DaftarController::class, 'show'])->name('viewdaftar');
 });
 
 Route::get('/pendaftaran',[DaftarController::class,'daftar'])->name('daftar');

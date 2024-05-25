@@ -23,7 +23,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
-                        
+
                         <!-- /.card -->
 
                         <div class="card">
@@ -35,32 +35,34 @@
                                 <table id="example1" class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
-                                            <th>Rendering engine</th>
-                                            <th>Browser</th>
-                                            <th>Platform(s)</th>
-                                            <th>Engine version</th>
-                                            <th>CSS grade</th>
+                                            <th>No</th>
+                                            <th>Nama</th>
+                                            <th>Jurusan</th>
+                                            <th>Eskul</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>Trident</td>
-                                            <td>Internet
-                                                Explorer 4.0
-                                            </td>
-                                            <td>Win 95+</td>
-                                            <td> 4</td>
-                                            <td>X</td>
-                                        </tr>
-                                        
+                                        @foreach ($siswa as $no=>$daftar)
+                                            <tr>
+                                                <td>{{ $no +1 }}</td>
+                                                <td>{{ $daftar['nama_pendaftaran'] }}
+                                                </td>
+                                                <td>{{ $data['nama_jurusan'] }}</td>
+                                                <td> {{ $daftar->eskul->nama_eskul}}</td>
+                                                <td>X</td>
+                                            </tr>
+                                        @endforeach
+
+
                                     </tbody>
                                     <tfoot>
                                         <tr>
-                                            <th>Rendering engine</th>
-                                            <th>Browser</th>
-                                            <th>Platform(s)</th>
-                                            <th>Engine version</th>
-                                            <th>CSS grade</th>
+                                            <th>No</th>
+                                            <th>Nama</th>
+                                            <th>Jurusan</th>
+                                            <th>Eskul</th>
+                                            <th>Action</th>
                                         </tr>
                                     </tfoot>
                                 </table>

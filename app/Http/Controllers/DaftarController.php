@@ -34,5 +34,12 @@ class DaftarController extends Controller
         return view('admin.pages.data_daftar');
     }
 
+    public function show($id){
+        $data=Jurusan::find($id);
+        $siswa = Daftar::where('id_jurusan', $id)->with('eskul')->orderBy('nama_pendaftaran', 'asc')->get();
+        
+        return view('admin.pages.data_daftar',compact('data','siswa'));
+    }
+
 
 }

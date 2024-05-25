@@ -11,4 +11,9 @@ class Daftar extends Model
     protected $table='tbl_pendaftaran';
     protected $primaryKey='id_pendaftaran';
     protected $guarded=[];
+
+    public function eskul()
+    {
+        return $this->belongsTo(Eskul::class, 'id_eskul', 'id_eskul');
+    }
 }
