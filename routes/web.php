@@ -22,9 +22,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('daftar.pendaftaran');
-});
+// Route::get('/', function () {
+//     return view('daftar.pendaftaran');
+// });
 Route::middleware(['guest'])->group(function () {
     Route::get('/login', [LoginController::class, 'show'])->name('login');
     Route::post('/storelogin', [LoginController::class, 'store'])->name('storelogin');
