@@ -56,3 +56,5 @@ Route::middleware(['auth'])->group(function () {
 
 Route::get('/pendaftaran',[DaftarController::class,'daftar'])->name('daftar');
 Route::post('/pendaftaran',[DaftarController::class,'store'])->name('storedaftar');
+
+//hai//
